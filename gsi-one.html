@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="GSI ONE: plataforma integrada para fluxos assistenciais, indicadores e inteligência territorial em saúde pública." />
+  <meta name="theme-color" content="#071b33" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="GSI HealthTech" />
+  <meta property="og:title" content="GSI ONE | Plataforma de Gestão Assistencial — GSI HealthTech" />
+  <meta property="og:description" content="GSI ONE: plataforma integrada para fluxos assistenciais, indicadores e inteligência territorial em saúde pública." />
+  <meta property="og:url" content="https://gsihealthtech.com.br/gsi-one.html" />
+  <title>GSI ONE | Plataforma de Gestão Assistencial — GSI HealthTech</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Sprite de ícones reutilizados nos módulos e cards -->
+  <svg class="icon-sprite" aria-hidden="true" style="display:none">
+    <symbol id="icon-door" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="M5 21V4a1 1 0 0 1 1-1h7l5 3v15" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M13 3v18M9 12h.01" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-clipboard" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <rect x="6" y="4" width="12" height="17" rx="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M9 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1M9 11h6M9 15h6" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-activity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="M3 12h4l3 8 4-16 3 8h4" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="12" cy="12" r="3"/>
+    </symbol>
+    <symbol id="icon-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="M12 3 2 21h20L12 3Z" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M12 10v4M12 17h.01" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-flask" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="M9 2h6M10 2v7L4.5 19a2 2 0 0 0 1.8 3h11.4a2 2 0 0 0 1.8-3L14 9V2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M7 16h10" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-cross" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <rect x="3" y="3" width="18" height="18" rx="4"/>
+      <path d="M12 8v8M8 12h8" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M9 8l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-bar-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="M4 20V10M12 20V4M20 20v-7" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M2 20h20" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-map" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="M9 4 4 6v14l5-2 6 2 5-2V4l-5 2-6-2Z" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M9 4v14M15 6v14" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="M6 2h9l5 5v15H6Z" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M15 2v5h5M9 13h6M9 17h6" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="M12 2 4 5v6c0 5.2 3.6 8.7 8 11 4.4-2.3 8-5.8 8-11V5l-8-3Z" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="m9 12 2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-map-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="M12 22s7-7.4 7-12.5A7 7 0 0 0 5 9.5C5 14.6 12 22 12 22Z" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="12" cy="9.5" r="2.4"/>
+    </symbol>
+    <symbol id="icon-trending-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="M3 17 9 11l4 4 8-8" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M15 7h6v6" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="m12 2 9 5-9 5-9-5 9-5Z" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="m3 12 9 5 9-5M3 17l9 5 9-5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-check-square" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <rect x="3" y="3" width="18" height="18" rx="3"/>
+      <path d="m8 12 3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-check-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="m8 12 3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-gauge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="M4 14a8 8 0 1 1 16 0" stroke-linecap="round"/>
+      <path d="M12 14 16 9" stroke-linecap="round"/>
+      <path d="M2 19h20" stroke-linecap="round"/>
+    </symbol>
+  </svg>
+
+  <header class="site-header" id="topo">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="GSI HealthTech">
+        <span class="brand-mark">GSI</span>
+        <span class="brand-text">
+          <strong>GSI HealthTech</strong>
+          <small>Saúde digital e gestão pública</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" aria-label="Menu principal">
+        <a href="index.html">Início</a>
+        <a href="index.html#sobre">Sobre</a>
+        <a href="gsi-one.html" class="active" aria-current="page">GSI ONE</a>
+        <a href="avanca-hospital.html">Avança Hospital</a>
+        <a href="index.html#solucoes">Soluções</a>
+        <a href="index.html#observatorio">Observatório</a>
+        <a href="index.html#contato" class="nav-cta">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <span class="eyebrow">Sistema / Plataforma com login</span>
+          <h1>GSI ONE</h1>
+          <p class="hero-subtitle">Plataforma integrada para fluxos assistenciais, indicadores e inteligência territorial em saúde pública.</p>
+          <p class="hero-text">
+            O GSI ONE é o sistema/plataforma com login do ecossistema GSI HealthTech. Para usuários autorizados, ele organiza o percurso assistencial do paciente desde a entrada até o desfecho, conectando setores, registros, indicadores, relatórios e observatórios em uma estrutura modular para hospitais municipais e redes públicas de saúde.
+          </p>
+          <div class="hero-actions">
+            <a href="#modulos" class="btn btn-lg btn-primary">Ver módulos da plataforma<svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a href="avanca-hospital.html" class="btn btn-lg btn-secondary">Conhecer o case Avança Hospital<svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a href="index.html#contato" class="btn btn-lg btn-ghost">Falar com a GSI HealthTech</a>
+          </div>
+        </div>
+
+        <div class="hero-panel reveal" aria-label="Painel ilustrativo GSI ONE">
+          <div class="panel-header">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="panel-title">Painel da Plataforma GSI ONE</div>
+          <div class="metric-row">
+            <div>
+              <strong>Fluxos Assistenciais</strong>
+              <small>Percurso ponta a ponta</small>
+            </div>
+            <span>360°</span>
+          </div>
+          <div class="metric-row">
+            <div>
+              <strong>Indicadores</strong>
+              <small>Gestão e auditoria</small>
+            </div>
+            <span>BI</span>
+          </div>
+          <div class="metric-row">
+            <div>
+              <strong>Território</strong>
+              <small>Mobilidade assistencial</small>
+            </div>
+            <span>SUS</span>
+          </div>
+          <div class="metric-row">
+            <div>
+              <strong>Rastreabilidade</strong>
+              <small>Registro assistencial completo</small>
+            </div>
+            <span>PEP</span>
+          </div>
+          <div class="flow-line">
+            <span>Recepção</span>
+            <span>Triagem</span>
+            <span>Consulta</span>
+            <span>Observação</span>
+            <span>Estabilização</span>
+            <span>Exames</span>
+            <span>Farmácia</span>
+            <span>Transferências</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="visao-geral">
+      <div class="container split">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Visão geral</span>
+          <h2>Uma plataforma modular para o percurso assistencial completo.</h2>
+        </div>
+        <div class="text-block reveal">
+          <p>
+            O GSI ONE estrutura digitalmente o caminho do paciente dentro da unidade de saúde, conectando recepção, triagem, consulta, enfermagem, observação, exames, farmácia e transferências em um fluxo único e rastreável, com acesso restrito a usuários autorizados mediante login.
+          </p>
+          <p>
+            A plataforma foi pensada para evoluir de forma gradual, conforme a maturidade da unidade de saúde, a estrutura tecnológica disponível e as necessidades da gestão municipal.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-accent" id="percurso">
+      <div class="container">
+        <div class="section-heading center reveal">
+          <span class="eyebrow">Percurso assistencial</span>
+          <h2>Da entrada ao desfecho, um fluxo único e rastreável.</h2>
+          <p>Cada etapa do atendimento é registrada e conectada às demais, dando visibilidade completa ao percurso do paciente.</p>
+        </div>
+
+        <div class="cards-grid three">
+          <article class="card card-sm reveal">
+            <svg class="card-icon"><use href="#icon-door"/></svg>
+            <h3>Entrada e Triagem</h3>
+            <p>Acolhimento inicial, cadastro e classificação de risco do paciente.</p>
+          </article>
+          <article class="card card-sm reveal">
+            <svg class="card-icon"><use href="#icon-activity"/></svg>
+            <h3>Consulta e Conduta</h3>
+            <p>Avaliação médica, hipótese diagnóstica e definição da conduta.</p>
+          </article>
+          <article class="card card-sm reveal">
+            <svg class="card-icon"><use href="#icon-check-square"/></svg>
+            <h3>Enfermagem e Evolução</h3>
+            <p>Cuidados de enfermagem, evolução e monitoramento contínuo.</p>
+          </article>
+          <article class="card card-sm reveal">
+            <svg class="card-icon"><use href="#icon-eye"/></svg>
+            <h3>Observação e Estabilização</h3>
+            <p>Acompanhamento clínico e suporte a quadros que exigem estabilização.</p>
+          </article>
+          <article class="card card-sm reveal">
+            <svg class="card-icon"><use href="#icon-flask"/></svg>
+            <h3>Exames e Farmácia</h3>
+            <p>Apoio diagnóstico e terapêutico integrado ao percurso assistencial.</p>
+          </article>
+          <article class="card card-sm reveal">
+            <svg class="card-icon"><use href="#icon-arrow"/></svg>
+            <h3>Transferência e Desfecho</h3>
+            <p>Regulação, transferência segura ou desfecho do atendimento.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="modulos">
+      <div class="container">
+        <div class="section-heading center reveal">
+          <span class="eyebrow">Módulos operacionais</span>
+          <h2>Estrutura modular para cada etapa da assistência.</h2>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card card-sm reveal">
+            <svg class="card-icon"><use href="#icon-door"/></svg>
+            <h3>Recepção e Cadastro</h3>
+            <p>Entrada organizada do paciente, com identificação e abertura do atendimento.</p>
+          </article>
+          <article class="card card-sm reveal">
+            <svg class="card-icon"><use href="#icon-gauge"/></svg>
+            <h3>Painel de Chamada</h3>
+            <p>Chamada visual e ordenada de pacientes nas filas de atendimento.</p>
+          </article>
+          <article class="card card-sm reveal">
+            <svg class="card-icon"><use href="#icon-clipboard"/></svg>
+            <h3>Triagem e Classificação de Risco</h3>
+            <p>Avaliação inicial e priorização conforme critérios de risco.</p>
+          </article>
+          <article class="card card-sm reveal">
+            <svg class="card-icon"><use href="#icon-activity"/></svg>
+            <h3>Consulta e Conduta Médica</h3>
+            <p>Registro da avaliação clínica, hipóteses e conduta médica.</p>
+          </article>
+          <article class="card card-sm reveal">
+            <svg class="card-icon"><use href="#icon-check-square"/></svg>
+            <h3>Enfermagem e Evolução</h3>
+            <p>Registro de cuidados, evolução e sinais vitais da equipe de enfermagem.</p>
+          </article>
+          <article class="card card-sm reveal">
+            <svg class="card-icon"><use href="#icon-eye"/></svg>
+            <h3>Observação Clínica, Pediátrica e Obstétrica</h3>
+            <p>Monitoramento contínuo e reavaliação por perfil assistencial.</p>
+          </article>
+          <article class="card card-sm reveal">
+            <svg class="card-icon"><use href="#icon-alert"/></svg>
+            <h3>Sala de Estabilização</h3>
+            <p>Fluxo crítico, checklist e suporte à estabilização do paciente.</p>
+          </article>
+          <article class="card card-sm reveal">
+            <svg class="card-icon"><use href="#icon-flask"/></svg>
+            <h3>Exames</h3>
+            <p>Solicitação, registro e acompanhamento de exames complementares.</p>
+          </article>
+          <article class="card card-sm reveal">
+            <svg class="card-icon"><use href="#icon-cross"/></svg>
+            <h3>Farmácia</h3>
+            <p>Controle de dispensação e registro de medicamentos administrados.</p>
+          </article>
+          <article class="card card-sm reveal">
+            <svg class="card-icon"><use href="#icon-arrow"/></svg>
+            <h3>Transferências e Regulação</h3>
+            <p>Organização da transferência segura e da regulação de leitos.</p>
+          </article>
+          <article class="card card-sm reveal">
+            <svg class="card-icon"><use href="#icon-bar-chart"/></svg>
+            <h3>Indicadores</h3>
+            <p>Painéis de gestão para acompanhamento assistencial e administrativo.</p>
+          </article>
+          <article class="card card-sm reveal">
+            <svg class="card-icon"><use href="#icon-map"/></svg>
+            <h3>Observatório Territorial</h3>
+            <p>Leitura territorial da origem e mobilidade dos pacientes.</p>
+          </article>
+          <article class="card card-sm reveal">
+            <svg class="card-icon"><use href="#icon-file"/></svg>
+            <h3>Prontuário</h3>
+            <p>Registro estruturado e rastreável do percurso assistencial.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="indicadores">
+      <div class="container">
+        <div class="section-heading center reveal">
+          <span class="eyebrow">Indicadores e relatórios</span>
+          <h2>Informação estruturada para decisão e auditoria.</h2>
+        </div>
+
+        <div class="module-grid">
+          <span><svg class="module-icon"><use href="#icon-bar-chart"/></svg>Indicadores Assistenciais</span>
+          <span><svg class="module-icon"><use href="#icon-shield"/></svg>Indicadores de Auditoria</span>
+          <span><svg class="module-icon"><use href="#icon-gauge"/></svg>Painéis de Gestão</span>
+          <span><svg class="module-icon"><use href="#icon-file"/></svg>Relatórios Técnicos</span>
+          <span><svg class="module-icon"><use href="#icon-layers"/></svg>Painéis Executivos</span>
+          <span><svg class="module-icon"><use href="#icon-map"/></svg>Indicadores Territoriais</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-accent" id="observatorio">
+      <div class="container split">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Observatório territorial</span>
+          <h2>Inteligência territorial integrada à plataforma.</h2>
+          <p>
+            O observatório do GSI ONE permite compreender de onde vêm os pacientes, quais demandas pressionam a rede, como períodos sazonais impactam os serviços e quais evidências podem apoiar planejamento, financiamento e reorganização da assistência.
+          </p>
+        </div>
+        <div class="territory-panel reveal">
+          <div class="territory-item">
+            <div class="territory-head"><svg class="territory-icon"><use href="#icon-map-pin"/></svg><strong>Origem</strong></div>
+            <span>Municípios e territórios de procedência</span>
+            <div class="territory-bar"><i style="--w:78%"></i></div>
+          </div>
+          <div class="territory-item">
+            <div class="territory-head"><svg class="territory-icon"><use href="#icon-arrow"/></svg><strong>Fluxos</strong></div>
+            <span>Mobilidade entre serviços e regiões</span>
+            <div class="territory-bar"><i style="--w:64%"></i></div>
+          </div>
+          <div class="territory-item">
+            <div class="territory-head"><svg class="territory-icon"><use href="#icon-trending-up"/></svg><strong>Sazonalidade</strong></div>
+            <span>Turismo, eventos e períodos críticos</span>
+            <div class="territory-bar"><i style="--w:52%"></i></div>
+          </div>
+          <div class="territory-item">
+            <div class="territory-head"><svg class="territory-icon"><use href="#icon-bar-chart"/></svg><strong>Planejamento</strong></div>
+            <span>Dados para captação e decisão pública</span>
+            <div class="territory-bar"><i style="--w:88%"></i></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="governanca">
+      <div class="container">
+        <div class="section-heading center reveal">
+          <span class="eyebrow">Segurança, rastreabilidade e governança</span>
+          <h2>Registro assistencial seguro, íntegro e auditável.</h2>
+        </div>
+        <div class="diff-grid">
+          <div class="diff-item reveal"><svg class="diff-icon"><use href="#icon-check-circle"/></svg><span>Rastreabilidade completa do atendimento</span></div>
+          <div class="diff-item reveal"><svg class="diff-icon"><use href="#icon-check-circle"/></svg><span>Controle de acesso por perfil profissional</span></div>
+          <div class="diff-item reveal"><svg class="diff-icon"><use href="#icon-check-circle"/></svg><span>Registro estruturado por módulo assistencial</span></div>
+          <div class="diff-item reveal"><svg class="diff-icon"><use href="#icon-check-circle"/></svg><span>Trilha de auditoria dos eventos clínicos</span></div>
+          <div class="diff-item reveal"><svg class="diff-icon"><use href="#icon-check-circle"/></svg><span>Apoio à conformidade documental</span></div>
+          <div class="diff-item reveal"><svg class="diff-icon"><use href="#icon-check-circle"/></svg><span>Base técnica para faturamento e auditoria SUS</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="implantacao">
+      <div class="container">
+        <div class="section-heading center reveal">
+          <span class="eyebrow">Implantação modular</span>
+          <h2>Evolução gradual, conforme a maturidade da unidade de saúde.</h2>
+        </div>
+        <div class="cards-grid">
+          <article class="card card-md reveal">
+            <svg class="card-icon"><use href="#icon-clipboard"/></svg>
+            <h3>Diagnóstico Situacional</h3>
+            <p>Levantamento da realidade assistencial e tecnológica da unidade.</p>
+          </article>
+          <article class="card card-md reveal">
+            <svg class="card-icon"><use href="#icon-gauge"/></svg>
+            <h3>Configuração e Parametrização</h3>
+            <p>Ajuste dos módulos conforme fluxos e protocolos locais.</p>
+          </article>
+          <article class="card card-md reveal">
+            <svg class="card-icon"><use href="#icon-check-circle"/></svg>
+            <h3>Capacitação das Equipes</h3>
+            <p>Preparação das equipes assistenciais e administrativas para uso da plataforma.</p>
+          </article>
+          <article class="card card-md reveal">
+            <svg class="card-icon"><use href="#icon-trending-up"/></svg>
+            <h3>Acompanhamento e Evolução</h3>
+            <p>Monitoramento contínuo e evolução gradual da implantação.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="apresentacao">
+      <div class="container contact-box reveal">
+        <span class="eyebrow">Apresentação</span>
+        <h2>Quer conhecer o GSI ONE em detalhes?</h2>
+        <p>
+          A GSI HealthTech apresenta o GSI ONE para gestores, equipes técnicas e direções hospitalares interessadas em modernizar o percurso assistencial.
+        </p>
+        <div class="hero-actions center-actions">
+          <a href="mailto:contato@gsihealthtech.com.br" class="btn btn-md btn-primary">contato@gsihealthtech.com.br</a>
+          <a href="avanca-hospital.html" class="btn btn-md btn-secondary">Conhecer o Avança Hospital</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>GSI HealthTech</strong>
+        <p>Saúde digital, gestão pública e inteligência territorial.</p>
+      </div>
+      <div>
+        <p><a href="gsi-one.html">GSI ONE</a></p>
+        <p><a href="avanca-hospital.html">Avança Hospital</a></p>
+        <p>gsihealthtech.com.br</p>
+      </div>
+      <div>
+        <p>Canindé de São Francisco - SE / Brasil</p>
+        <p>2026</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Voltar ao topo">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

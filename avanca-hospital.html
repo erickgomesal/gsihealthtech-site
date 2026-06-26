@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Avança Hospital: case de modernização hospitalar, governança assistencial e inteligência territorial da GSI HealthTech." />
+  <meta name="theme-color" content="#071b33" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="GSI HealthTech" />
+  <meta property="og:title" content="Avança Hospital | Case de Modernização Hospitalar — GSI HealthTech" />
+  <meta property="og:description" content="Avança Hospital: case de modernização hospitalar, governança assistencial e inteligência territorial da GSI HealthTech." />
+  <meta property="og:url" content="https://gsihealthtech.com.br/avanca-hospital.html" />
+  <title>Avança Hospital | Case de Modernização Hospitalar — GSI HealthTech</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Sprite de ícones reutilizados nos módulos e cards -->
+  <svg class="icon-sprite" aria-hidden="true" style="display:none">
+    <symbol id="icon-door" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="M5 21V4a1 1 0 0 1 1-1h7l5 3v15" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M13 3v18M9 12h.01" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-clipboard" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <rect x="6" y="4" width="12" height="17" rx="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M9 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1M9 11h6M9 15h6" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-activity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="M3 12h4l3 8 4-16 3 8h4" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="12" cy="12" r="3"/>
+    </symbol>
+    <symbol id="icon-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="M12 3 2 21h20L12 3Z" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M12 10v4M12 17h.01" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-flask" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="M9 2h6M10 2v7L4.5 19a2 2 0 0 0 1.8 3h11.4a2 2 0 0 0 1.8-3L14 9V2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M7 16h10" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-cross" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <rect x="3" y="3" width="18" height="18" rx="4"/>
+      <path d="M12 8v8M8 12h8" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M9 8l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-bar-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="M4 20V10M12 20V4M20 20v-7" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M2 20h20" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-map" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="M9 4 4 6v14l5-2 6 2 5-2V4l-5 2-6-2Z" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M9 4v14M15 6v14" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="M6 2h9l5 5v15H6Z" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M15 2v5h5M9 13h6M9 17h6" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="M12 2 4 5v6c0 5.2 3.6 8.7 8 11 4.4-2.3 8-5.8 8-11V5l-8-3Z" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="m9 12 2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-map-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="M12 22s7-7.4 7-12.5A7 7 0 0 0 5 9.5C5 14.6 12 22 12 22Z" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="12" cy="9.5" r="2.4"/>
+    </symbol>
+    <symbol id="icon-trending-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="M3 17 9 11l4 4 8-8" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M15 7h6v6" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="m12 2 9 5-9 5-9-5 9-5Z" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="m3 12 9 5 9-5M3 17l9 5 9-5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-check-square" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <rect x="3" y="3" width="18" height="18" rx="3"/>
+      <path d="m8 12 3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-check-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="m8 12 3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-gauge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="M4 14a8 8 0 1 1 16 0" stroke-linecap="round"/>
+      <path d="M12 14 16 9" stroke-linecap="round"/>
+      <path d="M2 19h20" stroke-linecap="round"/>
+    </symbol>
+  </svg>
+
+  <header class="site-header" id="topo">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="GSI HealthTech">
+        <span class="brand-mark">GSI</span>
+        <span class="brand-text">
+          <strong>GSI HealthTech</strong>
+          <small>Saúde digital e gestão pública</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" aria-label="Menu principal">
+        <a href="index.html">Início</a>
+        <a href="index.html#sobre">Sobre</a>
+        <a href="gsi-one.html">GSI ONE</a>
+        <a href="avanca-hospital.html" class="active" aria-current="page">Avança Hospital</a>
+        <a href="index.html#solucoes">Soluções</a>
+        <a href="index.html#observatorio">Observatório</a>
+        <a href="index.html#contato" class="nav-cta">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <span class="eyebrow">Programa / Case de implantação</span>
+          <h1>Avança Hospital</h1>
+          <p class="hero-subtitle">Modernização hospitalar, governança assistencial e inteligência territorial aplicada à saúde pública.</p>
+          <p class="hero-text">
+            O Avança Hospital é o programa/case de implantação do ecossistema GSI HealthTech. Ele demonstra a aplicação prática da metodologia na reorganização de unidades hospitalares públicas, integrando diagnóstico situacional, protocolos, fluxos assistenciais, indicadores, sustentabilidade financeira, faturamento SUS, captação de recursos e observatório territorial.
+          </p>
+          <div class="hero-actions">
+            <a href="#eixos" class="btn btn-lg btn-primary">Ver eixos do programa<svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a href="gsi-one.html" class="btn btn-lg btn-secondary">Conhecer o GSI ONE<svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a href="index.html#contato" class="btn btn-lg btn-ghost">Falar com a GSI HealthTech</a>
+          </div>
+        </div>
+
+        <div class="hero-panel reveal" aria-label="Painel ilustrativo Avança Hospital">
+          <div class="panel-header">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="panel-title">Painel do Programa Avança Hospital</div>
+          <div class="metric-row">
+            <div>
+              <strong>Governança Hospitalar</strong>
+              <small>Estrutura institucional</small>
+            </div>
+            <span>GOV</span>
+          </div>
+          <div class="metric-row">
+            <div>
+              <strong>Urgência Segura</strong>
+              <small>Apoio contínuo ao fluxo crítico</small>
+            </div>
+            <span>24h</span>
+          </div>
+          <div class="metric-row">
+            <div>
+              <strong>Faturamento SUS</strong>
+              <small>Rastreabilidade e auditoria</small>
+            </div>
+            <span>SUS</span>
+          </div>
+          <div class="flow-line">
+            <span>Observação e Estabilização</span>
+            <span>Turismo Seguro</span>
+            <span>Captação de Recursos</span>
+            <span>Observatório Assistencial</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="visao-geral">
+      <div class="container split">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Visão geral do programa</span>
+          <h2>Metodologia aplicada à reorganização hospitalar pública.</h2>
+        </div>
+        <div class="text-block reveal">
+          <p>
+            O Avança Hospital parte de um diagnóstico situacional da unidade de saúde para estruturar protocolos, fluxos assistenciais e rotinas de governança, com foco na realidade de hospitais municipais e redes públicas de saúde.
+          </p>
+          <p>
+            A metodologia integra assistência, gestão e território, conectando reorganização clínica, sustentabilidade financeira e inteligência territorial em um único programa de modernização.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-accent" id="eixos">
+      <div class="container">
+        <div class="section-heading center reveal">
+          <span class="eyebrow">Eixos estratégicos</span>
+          <h2>Doze eixos para a modernização assistencial.</h2>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card card-md reveal">
+            <svg class="card-icon"><use href="#icon-shield"/></svg>
+            <h3>Governança Hospitalar</h3>
+            <p>Estruturação de responsabilidades, rotinas e gestão institucional.</p>
+          </article>
+          <article class="card card-md reveal">
+            <svg class="card-icon"><use href="#icon-activity"/></svg>
+            <h3>Urgência Segura</h3>
+            <p>Organização do percurso do paciente na entrada, triagem e desfecho.</p>
+          </article>
+          <article class="card card-md reveal">
+            <svg class="card-icon"><use href="#icon-clipboard"/></svg>
+            <h3>Triagem e Classificação de Risco</h3>
+            <p>Avaliação inicial e priorização conforme critérios de risco.</p>
+          </article>
+          <article class="card card-md reveal">
+            <svg class="card-icon"><use href="#icon-eye"/></svg>
+            <h3>Observação Clínica, Pediátrica e Obstétrica</h3>
+            <p>Monitoramento contínuo por perfil assistencial.</p>
+          </article>
+          <article class="card card-md reveal">
+            <svg class="card-icon"><use href="#icon-alert"/></svg>
+            <h3>Sala de Estabilização</h3>
+            <p>Fluxos críticos, checklist e suporte à estabilização.</p>
+          </article>
+          <article class="card card-md reveal">
+            <svg class="card-icon"><use href="#icon-gauge"/></svg>
+            <h3>Diagnóstico e Apoio 24h</h3>
+            <p>Suporte técnico contínuo ao fluxo de urgência.</p>
+          </article>
+          <article class="card card-md reveal">
+            <svg class="card-icon"><use href="#icon-file"/></svg>
+            <h3>Faturamento SUS</h3>
+            <p>Rastreabilidade e produção assistencial para faturamento.</p>
+          </article>
+          <article class="card card-md reveal">
+            <svg class="card-icon"><use href="#icon-check-square"/></svg>
+            <h3>Auditoria Hospitalar</h3>
+            <p>Verificação de conformidade dos registros assistenciais.</p>
+          </article>
+          <article class="card card-md reveal">
+            <svg class="card-icon"><use href="#icon-map-pin"/></svg>
+            <h3>Turismo Seguro</h3>
+            <p>Planejamento para sazonalidade, visitantes e eventos.</p>
+          </article>
+          <article class="card card-md reveal">
+            <svg class="card-icon"><use href="#icon-map"/></svg>
+            <h3>Observatório de Mobilidade Assistencial</h3>
+            <p>Leitura territorial da origem e fluxo dos pacientes.</p>
+          </article>
+          <article class="card card-md reveal">
+            <svg class="card-icon"><use href="#icon-trending-up"/></svg>
+            <h3>Captação de Recursos</h3>
+            <p>Projetos técnicos para emendas, programas e financiamento público.</p>
+          </article>
+          <article class="card card-md reveal">
+            <svg class="card-icon"><use href="#icon-check-circle"/></svg>
+            <h3>Protocolos Operacionais</h3>
+            <p>Padronização de rotinas e fluxos assistenciais.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="fluxos">
+      <div class="container">
+        <div class="section-heading center reveal">
+          <span class="eyebrow">Fluxos assistenciais reorganizados</span>
+          <h2>Um percurso assistencial reorganizado, do acolhimento ao desfecho.</h2>
+        </div>
+
+        <div class="module-grid">
+          <span><svg class="module-icon"><use href="#icon-door"/></svg>Recepção e Acolhimento</span>
+          <span><svg class="module-icon"><use href="#icon-clipboard"/></svg>Classificação de Risco</span>
+          <span><svg class="module-icon"><use href="#icon-activity"/></svg>Consulta e Conduta</span>
+          <span><svg class="module-icon"><use href="#icon-eye"/></svg>Observação Clínica</span>
+          <span><svg class="module-icon"><use href="#icon-alert"/></svg>Sala de Estabilização</span>
+          <span><svg class="module-icon"><use href="#icon-arrow"/></svg>Transferência Segura</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="observacao">
+      <div class="container">
+        <div class="section-heading center reveal">
+          <span class="eyebrow">Observação, estabilização e transferência</span>
+          <h2>Segurança assistencial nos momentos mais críticos do atendimento.</h2>
+        </div>
+
+        <div class="cards-grid three">
+          <article class="card card-md reveal">
+            <svg class="card-icon"><use href="#icon-eye"/></svg>
+            <h3>Observação Clínica, Pediátrica e Obstétrica</h3>
+            <p>Critérios de monitoramento, reavaliação e segurança assistencial por perfil.</p>
+          </article>
+          <article class="card card-md reveal">
+            <svg class="card-icon"><use href="#icon-alert"/></svg>
+            <h3>Sala de Estabilização</h3>
+            <p>Fluxo crítico, checklist e suporte imediato à estabilização.</p>
+          </article>
+          <article class="card card-md reveal">
+            <svg class="card-icon"><use href="#icon-arrow"/></svg>
+            <h3>Transferência e Regulação Segura</h3>
+            <p>Organização da transferência e apoio à regulação de leitos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-accent" id="faturamento">
+      <div class="container split">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Sustentabilidade financeira</span>
+          <h2>Faturamento SUS e auditoria com rastreabilidade assistencial.</h2>
+        </div>
+        <div class="text-block reveal">
+          <p>
+            O programa organiza o registro da produção assistencial, apoiando a rastreabilidade necessária para o faturamento SUS e para processos de auditoria hospitalar.
+          </p>
+          <p>
+            Essa estrutura também sustenta projetos de captação de recursos, emendas parlamentares e programas de financiamento público voltados à modernização hospitalar.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="turismo">
+      <div class="container split">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Turismo seguro e observatório de mobilidade</span>
+          <h2>Inteligência territorial para compreender a pressão sobre a rede.</h2>
+          <p>
+            A leitura territorial permite compreender o impacto de visitantes, eventos e sazonalidade sobre a rede pública de saúde, apoiando o planejamento assistencial e a captação de recursos.
+          </p>
+        </div>
+        <div class="territory-panel reveal">
+          <div class="territory-item">
+            <div class="territory-head"><svg class="territory-icon"><use href="#icon-map-pin"/></svg><strong>Turismo e Sazonalidade</strong></div>
+            <span>Visitantes, eventos e períodos críticos</span>
+            <div class="territory-bar"><i style="--w:70%"></i></div>
+          </div>
+          <div class="territory-item">
+            <div class="territory-head"><svg class="territory-icon"><use href="#icon-arrow"/></svg><strong>Mobilidade Assistencial</strong></div>
+            <span>Deslocamento entre municípios e serviços</span>
+            <div class="territory-bar"><i style="--w:64%"></i></div>
+          </div>
+          <div class="territory-item">
+            <div class="territory-head"><svg class="territory-icon"><use href="#icon-trending-up"/></svg><strong>Pressão sobre a Rede</strong></div>
+            <span>Picos de demanda e capacidade instalada</span>
+            <div class="territory-bar"><i style="--w:58%"></i></div>
+          </div>
+          <div class="territory-item">
+            <div class="territory-head"><svg class="territory-icon"><use href="#icon-bar-chart"/></svg><strong>Planejamento e Captação</strong></div>
+            <span>Dados territoriais para decisão pública</span>
+            <div class="territory-bar"><i style="--w:85%"></i></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="captacao">
+      <div class="container">
+        <div class="section-heading center reveal">
+          <span class="eyebrow">Documentos técnicos e captação de recursos</span>
+          <h2>Base técnica para projetos, emendas e programas públicos.</h2>
+        </div>
+        <div class="cards-grid three">
+          <article class="card card-md reveal">
+            <svg class="card-icon"><use href="#icon-clipboard"/></svg>
+            <h3>Diagnóstico Situacional</h3>
+            <p>Levantamento técnico da realidade assistencial e institucional.</p>
+          </article>
+          <article class="card card-md reveal">
+            <svg class="card-icon"><use href="#icon-file"/></svg>
+            <h3>Projetos Técnicos e Captação</h3>
+            <p>Documentos para apoiar captação de recursos e financiamento.</p>
+          </article>
+          <article class="card card-md reveal">
+            <svg class="card-icon"><use href="#icon-trending-up"/></svg>
+            <h3>Emendas e Programas Públicos</h3>
+            <p>Base técnica para emendas parlamentares e programas de saúde.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="apresentacao">
+      <div class="container contact-box reveal">
+        <span class="eyebrow">Apresentação institucional</span>
+        <h2>Quer levar o Avança Hospital ao seu município?</h2>
+        <p>
+          A GSI HealthTech apoia gestores e instituições públicas na aplicação prática da metodologia Avança Hospital.
+        </p>
+        <div class="hero-actions center-actions">
+          <a href="mailto:contato@gsihealthtech.com.br" class="btn btn-md btn-primary">contato@gsihealthtech.com.br</a>
+          <a href="gsi-one.html" class="btn btn-md btn-secondary">Conhecer o GSI ONE</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>GSI HealthTech</strong>
+        <p>Saúde digital, gestão pública e inteligência territorial.</p>
+      </div>
+      <div>
+        <p><a href="gsi-one.html">GSI ONE</a></p>
+        <p><a href="avanca-hospital.html">Avança Hospital</a></p>
+        <p>gsihealthtech.com.br</p>
+      </div>
+      <div>
+        <p>Canindé de São Francisco - SE / Brasil</p>
+        <p>2026</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Voltar ao topo">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,5 +1,7 @@
 # GSI HealthTech Site
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5807f664-4e9e-44ca-a15d-a64648a6cc6f/deploy-status)](https://app.netlify.com/projects/bejewelled-kataifi-a0bb62/deploys)
+
 Site institucional da GSI HealthTech, marca principal de saúde digital, gestão pública e inteligência territorial para redes públicas de saúde.
 
 ## Arquitetura do ecossistema
@@ -37,6 +39,14 @@ README.md
 3. Conecte o repositório ao Netlify.
 4. Como é um site estático, não é necessário configurar build command.
 5. Use como diretório de publicação a raiz do projeto.
+
+## Deploy
+
+- O site está publicado no Netlify.
+- Projeto Netlify: `bejewelled-kataifi-a0bb62`.
+- Link temporário: https://bejewelled-kataifi-a0bb62.netlify.app
+- Domínio definitivo previsto: https://gsihealthtech.com.br
+- O deploy é feito automaticamente a partir da branch `main` do GitHub.
 
 ## Padrão visual da família GSI
 

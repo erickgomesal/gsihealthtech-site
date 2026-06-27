@@ -65,13 +65,19 @@ Elementos que compõem esse sistema visual e devem ser mantidos em futuras pági
 
 ### Escala de botões
 
-| Classe | Uso recomendado | Altura mínima |
-| --- | --- | --- |
-| `.btn-lg` | Hero e CTAs de maior destaque (primeira dobra) | 54px (48px no mobile) |
-| `.btn-md` | CTAs de seções importantes, como contato | 46px |
-| `.btn-sm` | Ações internas, dentro de seções e cards | 38px |
+| Classe | Altura | Padding horizontal | Fonte | Uso recomendado |
+| --- | --- | --- | --- | --- |
+| `.btn-lg` | 46px | 24px | 0.97rem | Somente botões principais da hero |
+| `.btn-md` | 43px | 20px | 0.92rem | CTAs intermediários, botão de contato secundário e CTAs finais |
+| `.btn-sm` | 38px | 16px | 0.85rem | Cards, seções internas e CTAs discretos |
 
 Toda classe de tamanho é combinada com uma variante de cor (`.btn-primary`, `.btn-secondary` ou `.btn-ghost`), por exemplo: `class="btn btn-lg btn-primary"`.
+
+Regras de uso:
+
+- `.btn-lg` deve ser usado apenas na hero — nunca em cards ou seções internas.
+- `.btn-sm` é a classe preferencial para botões dentro de cards e seções internas.
+- O botão "Contato" do header usa estilo próprio (`.nav-cta`, fora do sistema `.btn`), mas segue proporção equivalente ao `.btn-md`.
 
 ## Próximas evoluções
 

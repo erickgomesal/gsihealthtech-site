@@ -18,6 +18,9 @@ gsi-one.html           (GSI ONE — página do sistema/plataforma com login)
 avanca-hospital.html   (Avança Hospital — página do programa/case de implantação)
 style.css
 script.js
+assets/
+  favicon.svg          (favicon provisório)
+  og-gsihealthtech.svg (imagem provisória de compartilhamento/Open Graph)
 README.md
 ```
 
@@ -79,10 +82,16 @@ Regras de uso:
 - `.btn-sm` é a classe preferencial para botões dentro de cards e seções internas.
 - O botão "Contato" do header usa estilo próprio (`.nav-cta`, fora do sistema `.btn`), mas segue proporção equivalente ao `.btn-md`.
 
+## Identidade e compartilhamento
+
+- `assets/favicon.svg` é o favicon provisório do site (composição em SVG com as iniciais "GSI" sobre o gradiente institucional azul escuro/teal). Está referenciado via `<link rel="icon">` nas três páginas.
+- `assets/og-gsihealthtech.svg` é a imagem provisória usada nas tags `og:image` e `twitter:image`, exibida ao compartilhar o site no WhatsApp, LinkedIn, Facebook e similares.
+- As três páginas (`index.html`, `gsi-one.html`, `avanca-hospital.html`) possuem SEO básico (title e description únicos por página), Open Graph completo (`og:type`, `og:locale`, `og:site_name`, `og:title`, `og:description`, `og:url`, `og:image`) e Twitter Card (`twitter:card`, `twitter:title`, `twitter:description`, `twitter:image`).
+- Esses arquivos são provisórios: futuramente devem ser substituídos por versões oficiais da identidade visual da marca (logotipo definitivo e imagem de compartilhamento em alta fidelidade).
+
 ## Próximas evoluções
 
 - Inserir logotipo oficial da GSI HealthTech.
 - Criar área de projetos e captação.
 - Criar formulário de contato.
-- Preparar SEO básico e favicon.
 - Integrar futuramente com sistema web.

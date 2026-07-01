@@ -7,7 +7,7 @@ Site institucional da GSI HealthTech, marca principal de saúde digital, gestão
 ## Arquitetura do ecossistema
 
 - **GSI HealthTech** = assinatura institucional e ecossistema (marca guarda-chuva).
-- **GSI ONE** = sistema/plataforma com login (ambiente operacional para usuários autorizados — equipes assistenciais, gestão e administração). O login ainda não é funcional neste protótipo; o conceito está documentado nos textos das páginas.
+- **GSI ONE** = sistema/plataforma com login (ambiente operacional para usuários autorizados — equipes assistenciais, gestão e administração). A demonstração funcional com login e banco de dados é realizada em ambiente controlado, com autenticação por perfil, banco Supabase, regras de segurança por RLS e trilha de auditoria. O site público apresenta a visão institucional da plataforma.
 - **Avança Hospital** = programa/case de implantação (demonstração da metodologia aplicada à modernização hospitalar, não é um sistema ou produto).
 
 ## Estrutura dos arquivos
